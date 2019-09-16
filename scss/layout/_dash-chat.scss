@@ -1,0 +1,221 @@
+.dashbroad {
+    float: left;
+    padding: 40px 50px;
+    background: $dash-background;
+    width: calc(100% - 91px);
+    height: inherit;
+    overflow: auto;
+
+    .dashbroad-main {
+        width: calc(100% - 400px);
+        float: left;
+    }
+}
+
+.chat-view {
+
+    .chat-head {
+        margin-bottom: 10px;
+
+        h3 {
+            display: inline-block;
+
+            span {
+                display: inline-block;
+                border: none;
+                vertical-align: top;
+            }
+
+            .type-status {
+                display: none;
+            }
+
+            .type-status.show-type {
+                display: inline-block;
+            }
+
+            .username {
+                margin-left: 10px;
+                text-transform: capitalize;
+                @include text-overflow(200px);
+            }
+        }
+    }
+
+    a {
+        float: right;
+        padding: 10px 12px;
+    }
+}
+
+.chat-single {
+    background: rgba(#fff, .6);
+    padding: 20px 30px;
+    position: relative;
+
+    .sticky-time {
+        font-size: 12px;
+        color: #a6a6a6;
+        @include center(true, false);
+        text-transform: capitalize;
+    }
+
+    .chat-content {
+        margin-top: 40px;
+        width: 100%;
+        overflow: auto;
+        height: 330px;
+    }
+}
+
+.sent,
+.received {
+    &.chat-bubble {
+        margin: 20px 0 0;
+
+        &::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        &>figure {
+            width: 40px;
+            height: 40px;
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .chat-bubble-content {
+            background-color: #fff;
+            max-width: 50%;
+            padding: 10px 10px 20px;
+            border-radius: 5px;
+            position: relative;
+            line-height: 18px;
+            font-size: 14px;
+            box-shadow: 0 15px 45px 0 rgba(#7c87a8, 0.1);
+
+            figure {
+                font-size: 0;
+                margin: 20px 0 10px;
+                height: 70px;
+                width: 70px;
+                display: inline-block;
+
+                &+figure {
+                    margin-left: 15px;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                border: solid;
+            }
+
+            time {
+                position: absolute;
+                bottom: 5px;
+                right: 10px;
+                padding-right: 15px;
+                font-size: 12px;
+                color: #a6a6a6;
+            }
+        }
+    }
+}
+
+.sent.chat-bubble {
+    &>figure {
+        float: right;
+    }
+
+    .chat-bubble-content {
+        float: right;
+        margin-right: 20px;
+
+        &::before {
+            border-width: 7px 0 7px 7px;
+            border-color: transparent transparent transparent#fff;
+            right: -7px;
+            bottom: 7px;
+        }
+    }
+}
+
+.received.chat-bubble {
+    &>figure {
+        float: left;
+    }
+
+    .chat-bubble-content {
+        float: left;
+        margin-left: 20px;
+
+        &::before {
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #fff transparent transparent;
+            bottom: 7px;
+            left: -7px;
+        }
+    }
+}
+
+.chat-footer {
+    padding: 10px;
+    background-color: rgba(67, 146, 241, 0.1);
+
+    .reply-box {
+        width: calc(100% - 61px);
+        float: left;
+        position: relative;
+
+        input {
+            width: 100%;
+            border: none;
+            height: 46px;
+            border-radius: 3px;
+            font-size: 14px;
+            padding: 15px 80px 15px 15px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .attach,
+        .emoji {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+
+        .emoji {
+            right: 46px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    }
+
+    .btn-send {
+        height: 46px;
+        width: 46px;
+        margin-left: 15px;
+        border-radius: 50%;
+        background: #4d8cf4;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

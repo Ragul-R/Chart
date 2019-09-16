@@ -1,0 +1,216 @@
+.dashbroad-sidebar {
+    margin: 0 0 0 35px;
+    float: left;
+    width: 350px;
+}
+
+.sidebar-header {
+    position: relative;
+
+    h3 {
+        display: inline-block;
+        @include text-overflow(250px);
+        width: 100%;
+        text-transform: capitalize;
+
+        span {
+            margin-right: 15px;
+        }
+    }
+
+    .date-range {
+        float: right;
+        text-transform: capitalize;
+        background: none;
+        font-size: 12px;
+        color: $light-color;
+        position: relative;
+        padding: 0 20px 0 0;
+
+        &::after {
+            position: absolute;
+            content: "";
+            border: solid $light-color;
+            height: 7px;
+            width: 7px;
+            border-width: 0 1px 1px 0;
+            transform: rotate(45deg);
+            right: 0;
+        }
+    }
+
+    .range {
+        line-height: 20px;
+        background-color: $dash-background;
+        border-radius: 3px;
+        position: absolute;
+        right: 0;
+        border: 1px solid $light-color;
+        padding: 10px;
+        text-transform: capitalize;
+        margin-top: 5px;
+        transform: scaleY(0);
+        transition: transform ease-in-out 250ms;
+        transform-origin: top;
+
+        a {
+            font-size: 12px;
+            color: $light-color;
+        }
+    }
+
+    .show.range {
+        transform: scaleY(1);
+    }
+
+}
+
+.graph {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+
+    canvas {
+        height: 160px;
+    }
+}
+
+.upgrade-card {
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 20px 30px;
+    background-image: linear-gradient(252deg, #60d9f7, #58baf6 46%, #52a0f5 71%, #4d8cf4);
+    position: relative;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-image: linear-gradient(252deg, #60d9f7, #58baf6 46%, #52a0f5 71%, #4d8cf4);
+        right: -60px;
+        opacity: .6;
+        z-index: 0;
+    }
+
+    &::after {
+        top: -100px;
+        right: 50px;
+    }
+}
+
+.card-header {
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(#fff, .2);
+    position: relative;
+    z-index: 1;
+
+    svg {
+        float: left;
+    }
+
+    h3 {
+        color: white;
+        font-size: 14px;
+        float: left;
+        width: 90px;
+        padding: 10px 0;
+        line-height: 16px;
+        text-transform: capitalize;
+    }
+
+    .chance-percent {
+        margin-top: 10px;
+        float: left;
+        color: #fff;
+        font-size: 36px;
+    }
+}
+
+.card-body {
+    margin-top: 25px;
+    position: relative;
+    z-index: 1;
+
+    button {
+        color: #4d8cf4;
+        background-color: #fff;
+        padding: 12px 17px;
+        border-radius: 3px;
+    }
+
+    figure {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 30px;
+
+        img {
+            margin-left: -20px;
+            border-radius: 50%;
+        }
+    }
+
+    span {
+        color: #fff;
+        font-size: 12px;
+        font-family: 'MaisonNeue-Demi';
+    }
+
+}
+
+.card {
+    padding: 20px 30px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 3px;
+
+    h3 {
+        font-size: 14px;
+        @include text-overflow(200px);
+        display: inline-block;
+        text-transform: capitalize;
+    }
+
+    button {
+        float: right;
+        width: 20px;
+        height: 20px;
+    }
+
+    .card-body {
+        margin-top: 20px;
+
+        span {
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        p {
+            display: inline-block;
+            text-transform: capitalize;
+            font-size: 12px;
+            color: $light-color;
+        }
+    }
+}
+
+.views {
+    .card-body {
+        span {
+            color: $link-color;
+        }
+    }
+}
+
+.requests {
+    .card-body {
+        span {
+            color: #ff6d4a;
+        }
+    }
+}

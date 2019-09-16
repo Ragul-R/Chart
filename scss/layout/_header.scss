@@ -1,0 +1,106 @@
+.header-main {
+    padding: 20px 0;
+    border-bottom: 1px solid $border-color;
+
+    .brand-logo {
+        position: absolute;
+        top: 0;
+        padding: 20px 27px;
+        border-right: 1px solid $border-color;
+
+        img {
+            border-radius: 50%;
+            height: 40px;
+            width: 36px;
+            @include rings;
+        }
+    }
+}
+
+.nav-left {
+    position: relative;
+    margin-left: 150px;
+    float: left;
+
+    ul {
+        display: inline-block;
+        line-height: 40px;
+        vertical-align: middle;
+
+        li {
+            display: inline-block;
+            padding: 0 10px;
+
+            a {
+                color: rgba($link-color, .8);
+
+                &:hover {
+                    color: $link-color;
+                }
+            }
+
+            &+li {
+                margin-left: 60px;
+            }
+        }
+
+        .active {
+            a {
+                color: $link-color;
+            }
+        }
+    }
+
+    .indicator {
+        width: 90px;
+        height: 4px;
+        border: none;
+        margin: 16px 0 0 0;
+        background: $link-color;
+        position: absolute;
+        transition: left ease-in 350ms;
+    }
+}
+
+.nav-right {
+    float: right;
+    margin-right: 50px;
+
+    .searchbox {
+        display: inline-block;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+        margin-right: 20px;
+
+        label {
+            position: absolute;
+            padding: 11px;
+        }
+
+        input {
+            padding: 0 0 0 40px;
+            width: 260px;
+            height: 38px;
+            border: none;
+            border-radius: 5px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    figure {
+        display: inline-block;
+        vertical-align: top;
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 50%;
+            @include rings;
+        }
+    }
+}

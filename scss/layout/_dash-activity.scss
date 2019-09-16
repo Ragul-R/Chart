@@ -1,0 +1,68 @@
+.activity-view {
+    padding: 40px 0 0 0;
+
+    .tabs {
+        a {
+            display: inline-block;
+            color: #a6a6a6;
+            margin-bottom: 20px;
+
+            &:hover {
+                color: #000;
+            }
+
+            &+a {
+                margin-left: 20px;
+            }
+        }
+        .tab-active {
+            color: #000;
+        }
+    }
+}
+
+.activity {
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 5px 45px 0 rgba(46, 104, 208, 0.1);
+    margin-bottom: 20px;
+
+    h2 {
+        display: inline-block;
+        line-height: 40px;
+        font-size: 14px;
+        text-transform: capitalize;
+        @include text-overflow(calc(100% - 124px));
+        width: 100%;
+        border-right: 1px solid $border-color;
+
+        span {
+            margin: 0 15px;
+        }
+    }
+
+    .btn-remove {
+        padding: 10px 30px;
+        vertical-align: top;
+    }
+
+}
+
+.new-activity {
+    width: 100%;
+    background: none;
+    padding: 30px 0;
+    border: 1px dashed $border-color;
+    color: $link-color;
+    font-size: 16px;
+    text-transform: capitalize;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    .icon-add {
+        margin-right: 15px;
+    }
+}

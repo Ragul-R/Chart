@@ -1,0 +1,27 @@
+a {
+    font-family: 'MaisonNeue-Medium';
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+    font-family: 'MaisonNeue-Medium';
+}
+
+h3 {
+    font-family: 'MaisonNeue-Demi';
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-transform: capitalize;
+
+    &:focus {
+        outline: none;
+    }
+}

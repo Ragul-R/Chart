@@ -1,0 +1,47 @@
+%icon {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.icon-search {
+    @extend %icon;
+    fill: $border-color;
+}
+
+.icon-users,
+.icon-calender,
+.icon-bell,
+.icon-gear {
+    @extend %icon;
+    height: 20px;
+    width: 20px;
+}
+
+.icon-attach,
+.icon-emoji {
+    @extend %icon;
+    fill: #a6a6a6;
+}
+
+.icon-send {
+    @extend %icon;
+    fill: #fff;
+}
+
+.icon-grid {
+    @extend %icon;
+    height: 40px;
+    width: 40px;
+    fill: $border-color;
+}
+
+.icon-trash {
+    @extend %icon;
+}
+
+.icon-sheild {
+    @extend %icon;
+    height: 60px;
+    width: 60px;
+}

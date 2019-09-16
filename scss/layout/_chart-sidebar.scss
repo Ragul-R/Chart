@@ -1,0 +1,58 @@
+main {
+    height: calc(100vh - 81px);
+}
+
+.chart-sidebar {
+    width: 91px;
+    border-right: 1px solid $border-color;
+    overflow: hidden;
+    height: inherit;
+    float: left;
+    position: relative;
+}
+
+.contact-list {
+    height: calc(100% - 350px);
+    overflow: auto;
+    margin-top: 30px;
+    position: relative;
+
+    li {
+
+
+        &+li {
+            margin-top: 30px;
+        }
+
+        figure {
+            width: 40px;
+            margin: auto;
+            position: relative;
+            a{
+                display: inline-block;
+            }
+            span {
+                position: absolute;
+                right: 0;
+                top: 4px;
+            }
+        }
+    }
+}
+
+.control-panel {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    li {
+        a {
+            display: inline-block;
+            padding: 27px 35px;
+        }
+
+        &:last-child {
+            border-top: 1px solid $border-color;
+        }
+    }
+}
