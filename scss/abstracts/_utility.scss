@@ -6,6 +6,10 @@
     }
 }
 
+.hide {
+    display: none;
+}
+
 .status {
     display: inline-block;
     height: 10px;
@@ -23,9 +27,9 @@
         background: $link-color;
     }
 
-    &.appoint {
+    &.meet {
         border: none;
-        background: $appoint-color;
+        background: $meet-color;
     }
 }
 
@@ -42,7 +46,7 @@
     &::after {
         content: '+';
         position: absolute;
-        left: 8px;
+        left: 7px;
     }
 }
 
@@ -84,39 +88,33 @@
         color: $link-color;
     }
 
-    &.appoint {
-        background: rgba($appoint-color, .1);
-        color: $appoint-color;
+    &.meet {
+        background: rgba($meet-color, .1);
+        color: $meet-color;
     }
 }
 
-.typing-dots {
-    display: inline-block;
-    margin-left: 10px;
-    background: rgba($link-color, .6);
-    border-radius: 50%;
-    width: 6px;
-    height: 6px;
+.icon-close {
     position: relative;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
 
-    &::before,
-    &::after {
+    &::after,
+    &::before {
         content: '';
         position: absolute;
-        display: inline-block;
-        border-radius: 50%;
-        width: 6px;
-        height: 6px;
+        width: 2px;
+        height: 15px;
+        background: #fff;
+    }
+
+    &::after {
+        transform: rotate(45deg);
     }
 
     &::before {
-        left: 10px;
-        background: rgba($link-color, .3);
-    }
-
-    &::after {
-        right: 10px;
-        background: $link-color;
+        transform: rotate(-45deg);
     }
 }
 
@@ -148,7 +146,7 @@
     }
 }
 
-.msg-check {
+.msg-status {
 
     &::after,
     &::before {
@@ -168,7 +166,7 @@
     }
 }
 
-.read.msg-check {
+.read.msg-status {
 
     &::before,
     &::after {

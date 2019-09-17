@@ -58,6 +58,7 @@ dateRangeToggle.addEventListener('click',function(event){
     dateRange.classList.toggle('show');
 })
 
+//Nav Indicator
 var indicator = document.getElementsByClassName('indicator')[0];
 var links = document.querySelectorAll('.nav-left>ul>li');
 
@@ -73,7 +74,7 @@ for(let i = 0; i < links.length; i++){
 //Typing Animation
 var typeSts = document.getElementsByClassName('type-status')[0];
 var replyBox = document.getElementsByClassName('reply')[0];
-replyBox.addEventListener('keypress',function type(event){
+replyBox.addEventListener('keydown',function type(event){
     typeSts.classList.add('show-type');
 })
 replyBox.onkeyup = function removeType(event){
@@ -82,3 +83,37 @@ replyBox.onkeyup = function removeType(event){
     }, 2000);
 };
 
+//Tabs
+var tabLinks = document.querySelectorAll('.tab-nav > a');
+var tabs = document.querySelectorAll('.tab');
+window.onload = function tab(){
+    tabs[0].classList.add('show-tab');
+}
+for(let i = 0; i< tabLinks.length; i++){
+    tabLinks[i].addEventListener('click',function(event){
+        event.preventDefault();
+        for(let x = 0; x < tabs.length; x++){
+            tabs[x].classList.remove('show-tab');
+            tabLinks[x].classList.remove('tab-active');
+            if(x == i){
+                tabs[i].classList.add('show-tab');
+                tabLinks[i].classList.add('tab-active');
+            }
+        }
+    });
+};
+
+var removeActivity = document.getElementsByClassName('remove-activity');
+var removeNote = document.getElementsByClassName('remove-note');
+for(let i = 0; i<removeActivity.length;i++){
+    removeActivity[i].onclick = function(event){
+        event.preventDefault();
+        removeActivity[i].closest('li').classList.add('hide');
+    }
+}
+for(let i = 0; i<removeNote.length;i++){
+    removeNote[i].onclick = function(event){
+        event.preventDefault();
+        removeNote[i].closest('li').classList.add('hide');
+    }
+}

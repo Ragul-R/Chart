@@ -1,7 +1,7 @@
 .activity-view {
     padding: 40px 0 0 0;
 
-    .tabs {
+    .tab-nav {
         a {
             display: inline-block;
             color: #a6a6a6;
@@ -15,40 +15,44 @@
                 margin-left: 20px;
             }
         }
+
         .tab-active {
             color: #000;
         }
     }
 }
 
-.activity {
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 5px 45px 0 rgba(46, 104, 208, 0.1);
-    margin-bottom: 20px;
+.activity-list {
+    li {
+        padding: 20px 30px;
+        background: #fff;
+        box-shadow: 0 5px 45px 0 rgba(46, 104, 208, 0.1);
+        margin-bottom: 20px;
+        position: relative;
 
-    h2 {
-        display: inline-block;
-        line-height: 40px;
-        font-size: 14px;
-        text-transform: capitalize;
-        @include text-overflow(calc(100% - 124px));
-        width: 100%;
-        border-right: 1px solid $border-color;
+        h2 {
+            display: inline-block;
+            line-height: 40px;
+            font-size: 14px;
+            text-transform: capitalize;
+            @include text-overflow(calc(100% - 76px));
+            width: 100%;
 
-        span {
-            margin: 0 15px;
+            span {
+                margin: 0 15px;
+            }
+        }
+
+        .remove-activity {
+            position: absolute;
+            right: 0;
+            padding: 12px 30px;
+            border-left: 1px solid $border-color;
         }
     }
-
-    .btn-remove {
-        padding: 10px 30px;
-        vertical-align: top;
-    }
-
 }
 
-.new-activity {
+.new-activity,.new-note{
     width: 100%;
     background: none;
     padding: 30px 0;
@@ -66,3 +70,42 @@
         margin-right: 15px;
     }
 }
+.tab{
+    display: none;
+}
+.show-tab{
+    display: block;
+}
+.notes-list{
+    li{
+        padding: 20px;
+        position: relative;
+        border-radius: 3px;
+        margin-bottom: 20px;
+
+        h2{
+            text-transform: capitalize;
+            font-size: 14px;
+            @include text-overflow(calc(100% - 56px));
+            display: inline-block;
+        }
+        button{
+            background: none;
+            position: absolute;
+            right: 30px;
+        }
+    }
+    .call{
+        background: rgba($link-color,.1);
+        h2{
+            color: $link-color;
+        }
+    }
+    .meet{
+        background: rgba($meet-color, .1);
+        h2{
+            color: $meet-color;
+        }
+    }
+}
+

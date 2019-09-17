@@ -1,0 +1,32 @@
+
+.type-status{
+    vertical-align: middle;
+    .type-dot{
+        border-radius: 50%;
+        background: $link-color;
+        width: 6px;
+        height: 6px;
+        animation: loading linear 1s infinite;
+        &:first-child{
+            animation-delay: 0s;
+        }
+        &:nth-child(2){
+            animation-delay: .3s;
+        }
+        &:last-child{
+            animation-delay: .6s;
+        }
+    }
+}
+
+@keyframes loading{
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

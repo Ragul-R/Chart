@@ -22,8 +22,10 @@
 
             span {
                 display: inline-block;
+                vertical-align: middle;
+            }
+            .status.online{
                 border: none;
-                vertical-align: top;
             }
 
             .type-status {
