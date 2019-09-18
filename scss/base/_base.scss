@@ -13,8 +13,11 @@ h2 {
 
 h3 {
     font-family: 'MaisonNeue-Demi';
+    text-transform: capitalize;
 }
-
+p{
+    text-transform: capitalize;
+}
 button {
     border: none;
     cursor: pointer;

@@ -24,88 +24,110 @@
 
 .activity-list {
     li {
-        padding: 20px 30px;
+        padding: 20px 0 20px 30px;
         background: #fff;
         box-shadow: 0 5px 45px 0 rgba(46, 104, 208, 0.1);
         margin-bottom: 20px;
-        position: relative;
 
-        h2 {
-            display: inline-block;
+        span{
             line-height: 40px;
+            vertical-align: top;
+        }
+        .activity-content {
             font-size: 14px;
+            margin-left: 10px;
             text-transform: capitalize;
             @include text-overflow(calc(100% - 76px));
-            width: 100%;
+            &::before {
+                content: '';
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+        .badge{
+            margin-left: 15px;
+        }
 
-            span {
-                margin: 0 15px;
+        .activity-content.call {
+            &::before{
+                background: $link-color;
+            }
+        }
+
+        .activity-content.meet {
+            &::before{
+                background: $meet-color;
             }
         }
 
         .remove-activity {
-            position: absolute;
-            right: 0;
+            float: right;
             padding: 12px 30px;
             border-left: 1px solid $border-color;
         }
     }
 }
 
-.new-activity,.new-note{
+.new-activity,
+.new-note {
     width: 100%;
     background: none;
-    padding: 30px 0;
+    padding: 30px 50px;
+    text-align: center;
     border: 1px dashed $border-color;
     color: $link-color;
-    font-size: 16px;
-    text-transform: capitalize;
     cursor: pointer;
 
-    &:focus {
-        outline: none;
-    }
-
-    .icon-add {
-        margin-right: 15px;
+    p{
+        display: inline-block;
     }
 }
-.tab{
+
+.tab {
     display: none;
 }
-.show-tab{
+
+.show-tab {
     display: block;
 }
-.notes-list{
-    li{
+
+.notes-list {
+    li {
         padding: 20px;
         position: relative;
         border-radius: 3px;
         margin-bottom: 20px;
 
-        h2{
+        h2 {
             text-transform: capitalize;
             font-size: 14px;
             @include text-overflow(calc(100% - 56px));
             display: inline-block;
         }
-        button{
+
+        button {
             background: none;
             position: absolute;
             right: 30px;
         }
     }
-    .call{
-        background: rgba($link-color,.1);
-        h2{
+
+    .call {
+        background: rgba($link-color, .1);
+
+        h2 {
             color: $link-color;
         }
     }
-    .meet{
+
+    .meet {
         background: rgba($meet-color, .1);
-        h2{
+
+        h2 {
             color: $meet-color;
         }
     }
 }
-

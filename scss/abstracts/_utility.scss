@@ -35,18 +35,19 @@
 
 .icon-add {
     display: inline-block;
-    border: 2px solid $link-color;
-    height: 30px;
-    width: 30px;
     border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid $link-color;
+    height: 20px;
+    width: 20px;
     vertical-align: middle;
-    font-size: 20px;
     position: relative;
 
-    &::after {
-        content: '+';
+    &::before {
+        content: '\002b';
         position: absolute;
-        left: 7px;
+        top: 3px;
+        left: 4px;
     }
 }
 
@@ -82,6 +83,7 @@
     font-size: 12px;
     border-radius: 3px;
     font-family: 'MaisonNeue-Demi';
+    text-transform: capitalize;
 
     &.call {
         background: rgba($link-color, 0.1);

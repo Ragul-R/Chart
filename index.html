@@ -184,9 +184,9 @@
         </ul>
     </aside>
 
-    <section class="dashbroad clear">
-        <article class="dashbroad-main">
-            <section class="chat-view">
+    <article class="dashbroad clear">
+        <section class="dashbroad-main">
+            <article class="chat-view">
 
                 <header class="chat-head clear">
 
@@ -218,10 +218,10 @@
                                 <p>This is what i got in mind</p>
                                 <figure>
                                     <img src="images/chat-image.png" alt="">
-                                </figure>
-                                <figure class="video">
-                                    <img src="images/chat-image.png" alt="">
-                                </figure>
+                                </figure class="video">
+                                <video poster="images/chat-image.png" class="video">
+                                        <source src="" type="video/mp4">
+                                </video>
                                 <figure>
                                     <img src="images/chat-image.png" alt="">
                                 </figure>
@@ -247,7 +247,7 @@
                     </ul>
                 </div>
 
-                <footer class="chat-footer">
+                <div class="chat-footer">
                     <div class="reply-box">
                         <input type="text" class="reply">
 
@@ -271,10 +271,10 @@
                             <use href="#icon-send"></use>
                         </svg>
                     </button>
-                </footer>
-            </section>
+                </div>
+            </article>
 
-            <section class="activity-view">
+            <article class="activity-view">
                 <div class="tab-nav">
                     <a class="tab-active" href="javascript:void(0);">activity</a>
                     <a href="javascript:void(0);">notes</a>
@@ -282,38 +282,34 @@
 
                 <div class="tab">
                     <ul class="activity-list">
-                        <li>
+                        <li class="clear">
                             <button>
                                 <svg class="icon-grid">
                                     <use href="#icon-grid"></use>
                                 </svg>
                             </button>
 
-                            <h2>
-                                <span class="status call"></span>
+                            <span class="activity-content call">
                                 call glenn m.
-                                <span class="badge call">call</span>
-                            </h2>
-
+                            </span>
+                            <span class="badge call">call</span>
                             <button class="remove-activity">
                                 <svg class="icon-trash">
                                     <use href="#icon-trash"></use>
                                 </svg>
                             </button>
                         </li>
-                        <li>
+                        <li class="clear">
                             <button>
                                 <svg class="icon-grid">
                                     <use href="#icon-grid"></use>
                                 </svg>
                             </button>
 
-                            <h2>
-                                <span class="status meet"></span>
+                            <span class="activity-content meet">
                                 meet glenn m.
-                                <span class="badge meet">appointment</span>
-                            </h2>
-
+                            </span>
+                            <span class="badge meet">appointment</span>
                             <button class="remove-activity">
                                 <svg class="icon-trash">
                                     <use href="#icon-trash"></use>
@@ -321,9 +317,9 @@
                             </button>
                         </li>
                     </ul>
-                    <button class="new-activity">
-                        <span class="icon-add"></span> add new activity
-                    </button>
+                    <div class="new-activity">
+                        <span class="icon-add"></span><p>add new activity</p> 
+                    </div>
                 </div>
 
                 <div class="tab">
@@ -341,14 +337,13 @@
                             </button>
                         </li>
                     </ul>
-                    <button class="new-note">
-                        <span class="icon-add"></span>
-                        add new note
-                    </button>
+                    <div class="new-activity">
+                        <span class="icon-add"></span><p>add new activity</p> 
+                    </div>
                 </div>
                 <button></button>
-            </section>
-        </article>
+            </article>
+        </section>
 
         <aside class="dashbroad-sidebar">
             <header class="sidebar-header clear">
@@ -370,7 +365,7 @@
                 <canvas id="line-chart"></canvas>
             </article>
 
-            <article class="upgrade-card">
+            <article class="upgrade card">
                 <div class="card-header clear">
                     <svg class="icon-sheild">
                         <use href="#icon-sheild"></use>
@@ -378,9 +373,7 @@
 
                     <h3>chances of getting hired</h3>
 
-                    <span class="chance-percent">
-                        +47&#37;
-                    </span>
+                    <span class="chance-percent">47</span>
                 </div>
 
                 <div class="card-body">
@@ -396,7 +389,7 @@
                         <img src="images/friend3.jpg" alt="card-user-3">
                     </figure>
 
-                    <span>+22 others did</span>
+                    <span><span>+22</span> others did</span>
                 </div>
             </article>
 

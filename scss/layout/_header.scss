@@ -1,10 +1,8 @@
 .header-main {
-    padding: 20px 0;
     border-bottom: 1px solid $border-color;
 
     .brand-logo {
-        position: absolute;
-        top: 0;
+        float: left;
         padding: 20px 27px;
         border-right: 1px solid $border-color;
 
@@ -19,7 +17,8 @@
 
 .nav-left {
     position: relative;
-    margin-left: 150px;
+    margin-left: 60px;
+    padding: 20px 0;
     float: left;
 
     ul {
@@ -58,14 +57,14 @@
         margin: 16px 0 0 0;
         background: $link-color;
         position: absolute;
-        transition: left ease-in 350ms;
+        transition: all ease-in 350ms;
     }
 }
 
 .nav-right {
     float: right;
     margin-right: 50px;
-
+    padding: 20px 0;
     .searchbox {
         display: inline-block;
         border: 1px solid $border-color;
